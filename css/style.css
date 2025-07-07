@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Paleta de Cores e Fontes (Variáveis Globais)
+   ========================================================================== */
+
+:root {
+    --cor-fundo: #1a1a1a;
+    /* Um "off-black" para o fundo */
+    --cor-caixa: #2a2a2a;
+    /* Um cinza bem escuro para os cards */
+    --cor-texto: #e0e0e0;
+    /* Um cinza bem claro (quase branco) para leitura */
+    --cor-borda: #444444;
+    /* Uma borda sutil para os cards */
+    --cor-destaque: #c5a47e;
+    /* Nosso dourado, que continua perfeito! */
+    --fonte-titulo: 'Montserrat', sans-serif;
+    --fonte-corpo: 'Lato', sans-serif;
+}
+
+/* ==========================================================================
+   Estilos Gerais do Corpo e Tipografia
+   ========================================================================== */
+
+body {
+    font-family: var(--fonte-corpo);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--cor-texto);
+    margin: 0;
+    background-color: var(--cor-fundo);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+}
+
+a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: bold;
+    transition: text-decoration 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--cor-borda);
+    margin: 40px 0;
+}
+
+/* ==========================================================================
+   Cabeçalho e Navegação
+   ========================================================================== */
+
+header {
+    background-color: var(--cor-caixa);
+    text-align: center;
+    padding: 25px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+header h1 {
+    margin: 10px 0 0 0;
+    color: var(--cor-texto);
+}
+
+.menu-principal {
+    margin-top: 20px;
+}
+
+.menu-principal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-principal a:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-caixa);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Conteúdo Principal e Seções
+   ========================================================================== */
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    background-color: var(--cor-caixa);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+}
+
+section h2 {
+    color: var(--cor-destaque);
+    text-align: center;
+    margin-top: 0;
+}
+
+main section p {
+    text-align: left;
+}
+
+/* ==========================================================================
+   Galeria de Imagens (Placeholder)
+   ========================================================================== */
+
+.galeria-rede {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.galeria-rede img {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid var(--cor-borda);
+    border-radius: 5px;
+}
+
+/* ==========================================================================
+   Seção das Células
+   ========================================================================== */
+
+#celulas>p {
+    /* O parágrafo introdutório */
+    text-align: center;
+}
+
+.celulas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* VERSÃO MELHORADA DO CARD DA CÉLULA */
+.celula {
+    background-color: var(--cor-caixa);
+    border: 1px solid var(--cor-borda);
+    border-top: 4px solid var(--cor-destaque);
+    /* Borda dourada no topo! */
+    padding: 25px;
+    border-radius: 8px;
+    flex-basis: 280px;
+    flex-grow: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra para dar profundidade */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animação suave */
+}
+
+/* NOVO: Efeito de hover */
+.celula:hover {
+    transform: translateY(-8px);
+    /* Levanta o card ao passar o mouse */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    /* Aumenta a sombra */
+}
+
+/* MELHORADO: Alinhamento interno dos parágrafos */
+.celula p {
+    display: flex;
+    /* Usamos flex para alinhar ícone e texto */
+    align-items: center;
+    /* Alinha verticalmente no centro */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    margin: 12px 0;
+}
+
+.celula h3 {
+    text-align: center;
+    /* Mantemos o título da célula centralizado */
+}
+
+.icone-social {
+    height: 18px;
+}
