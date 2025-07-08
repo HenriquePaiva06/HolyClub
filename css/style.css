@@ -72,7 +72,7 @@ header img {
 
 header h1 {
     margin: 10px 0 0 0;
-    color: var(--cor-texto);
+    color: var(--cor-destaque);
 }
 
 .menu-principal {
@@ -129,6 +129,12 @@ section h2 {
 
 main section p {
     text-align: left;
+    margin: 15px 0;
+}
+
+.redes-sociais {
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* ==========================================================================
@@ -142,9 +148,10 @@ main section p {
 
 .galeria-rede img {
     width: 200px;
-    margin: 10px;
-    border: 3px solid var(--cor-borda);
-    border-radius: 5px;
+    /* margin: 10px; */
+    display: inline-block;
+    /* border: 3px solid var(--cor-borda);
+    border-radius: 5px; */
 }
 
 /* ==========================================================================
@@ -190,12 +197,17 @@ main section p {
 /* MELHORADO: Alinhamento interno dos parágrafos */
 .celula p {
     display: flex;
-    /* Usamos flex para alinhar ícone e texto */
     align-items: center;
-    /* Alinha verticalmente no centro */
     text-align: left;
-    /* Alinha o texto à esquerda */
-    margin: 12px 0;
+    margin: 14px 0;
+}
+
+.celula p>i,
+.celula p>img.icone-social {
+    flex-shrink: 0;
+    /* Impede o ícone de ser espremido */
+    margin-right: 12px;
+    /* Cria o espaço entre o ícone e o texto */
 }
 
 .celula h3 {
