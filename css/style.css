@@ -139,6 +139,19 @@ main section p {
     margin-top: 20px;
 }
 
+#sobre .redes-sociais img {
+    height: 60px;
+    /* Tamanho maior para o ícone de destaque */
+    width: 60px;
+    margin-bottom: 10px;
+    /* Espaço abaixo do ícone */
+}
+
+#sobre .redes-sociais a {
+    font-size: 1.2em;
+    /* Fonte maior para o @ da rede */
+}
+
 /* ==========================================================================
    Galeria de Imagens (Placeholder)
    ========================================================================== */
@@ -157,68 +170,117 @@ main section p {
 }
 
 /* ==========================================================================
-   Seção das Células
+   Seção das Células (VERSÃO REFINADA E CORRIGIDA)
    ========================================================================== */
 
-#celulas>p {
-    /* O parágrafo introdutório */
-    text-align: center;
-}
-
+/* Ajuste no container para um alinhamento mais limpo */
 .celulas-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+    justify-content: flex-start;
+    gap: 30px;
 }
 
-/* VERSÃO MELHORADA DO CARD DA CÉLULA */
+/* Card da Célula - Refinado */
 .celula {
     background-color: var(--cor-caixa);
     border: 1px solid var(--cor-borda);
-    border-top: 4px solid var(--cor-destaque);
-    /* Borda dourada no topo! */
-    padding: 25px;
-    border-radius: 8px;
-    flex-basis: 280px;
-    flex-grow: 1;
+    border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Sombra para dar profundidade */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Animação suave */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-/* NOVO: Efeito de hover */
 .celula:hover {
     transform: translateY(-8px);
-    /* Levanta o card ao passar o mouse */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    /* Aumenta a sombra */
 }
 
-/* MELHORADO: Alinhamento interno dos parágrafos */
-.celula p {
+.foto-celula {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Título com melhor espaçamento e separação */
+.celula h3 {
+    text-align: center;
+    color: var(--cor-texto);
+    font-size: 1.4em;
+    padding: 20px 20px 0 20px;
+    margin: 0;
+}
+
+/* Container de informações com layout interno aprimorado */
+.info-celula {
+    padding: 20px 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Ícone e texto com alinhamento refinado */
+.info-celula p {
     display: flex;
     align-items: center;
     text-align: left;
-    margin: 14px 0;
+    margin: 0;
 }
 
-.celula p>i,
-.celula p>img.icone-social {
+/* REGRA FINAL E CORRIGIDA PARA TODOS OS ÍCONES */
+.celula .info-celula p>i,
+.celula .info-celula p>img {
+    height: 20px;
+    width: 20px;
     flex-shrink: 0;
-    /* Impede o ícone de ser espremido */
     margin-right: 12px;
-    /* Cria o espaço entre o ícone e o texto */
 }
 
-.celula h3 {
+/* Botão "Veja Mais" com design mais leve e integrado */
+.botao-vejamais {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
     text-align: center;
-    /* Mantemos o título da célula centralizado */
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--fonte-titulo);
+    transition: filter 0.3s;
+    margin-top: auto;
+    border-top: 1px solid var(--cor-borda);
 }
 
-.icone-social {
-    height: 18px;
+.botao-vejamais:hover {
+    filter: brightness(1.2);
+    text-decoration: none;
+}
+
+/* Regra para o link do instagram (agora apenas para garantir o comportamento flex) */
+.link-social {
+    display: flex;
+    align-items: center;
+}
+
+/* ==========================================================================
+   Seção de Eventos
+   ========================================================================== */
+
+.evento {
+    background-color: #333333;
+    /* Um pouco mais escuro para diferenciar */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--cor-destaque);
+    /* Detalhe dourado na esquerda */
+    margin-top: 20px;
+}
+
+.evento h3 {
+    margin-top: 0;
+    color: var(--cor-destaque);
 }
 
 /* Rodapé */
