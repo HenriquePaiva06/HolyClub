@@ -46,7 +46,7 @@
             </p>
 
             <div class="galeria-rede">
-                <img src="img/Rede.jpeg" alt="Momento da rede 1">
+                <img src="img/Rede.jpeg" alt="Momento da rede 1" class="imagem-galeria">
             </div>
         </section>
 
@@ -55,89 +55,42 @@
         <section id="celulas">
             <h2 class="reveal">Nossas Células</h2>
             <p class="reveal">Encontre uma célula perto de você e venha fazer parte da nossa família!</p>
-            <div class="celulas-container">
 
-                <div class="celula reveal">
-                    <img class="foto-celula" src="img/priests.jpeg" alt="Foto da Célula Priests">
-
-                    <div class="conteudo-celula">
-
-                        <div class="titulo-bloco">
-                            <h3>Priests</h3>
-                        </div>
-
-                        <div class="info-contato">
-                            <p><i class="fa-solid fa-user"></i> <span>Ana Clara</span></p>
-                            <p><i class="fa-solid fa-phone"></i> <span>11 95224-3776</span></p>
-                        </div>
-
-                        <a href="https://www.instagram.com/priests.rlvb/" target="_blank" class="link-instagram">
-                            <i class="fa-brands fa-instagram"></i> <span>@priests.rlvb</span>
-                        </a>
-
-                    </div>
-
-                    <a href="celula-priests.html" class="botao-vejamais">Veja Mais</a>
-                </div>
-
-                <div class="celula reveal">
-                    <img class="foto-celula" src="img/hopeland.jpeg" alt="Foto da Célula HopeLand">
-
-                    <div class="conteudo-celula">
-
-                        <div class="titulo-bloco">
-                            <h3>HopeLand</h3>
-                        </div>
-
-                        <div class="info-contato">
-                            <p><i class="fa-solid fa-user"></i> <span>Rodrigo</span></p>
-                            <p><i class="fa-solid fa-phone"></i> <span>11 99005-7554</span></p>
-                        </div>
-
-                        <a href="https://www.instagram.com/hopeland.vb/" target="_blank" class="link-instagram">
-                            <i class="fa-brands fa-instagram"></i> <span>@hopeland.vb</span>
-                        </a>
-
-                    </div>
-
-                    <a href="celula-hopeland.html" class="botao-vejamais">Veja Mais</a>
-                </div>
-
-                <div class="celula reveal">
-                    <img class="foto-celula" src="img/burninghouse.jpeg" alt="Foto da Célula Burning House">
-
-                    <div class="conteudo-celula">
-
-                        <div class="titulo-bloco">
-                            <h3>Burning House</h3>
-                        </div>
-
-                        <div class="info-contato">
-                            <p><i class="fa-solid fa-user"></i> <span>Jhow</span></p>
-                            <p><i class="fa-solid fa-phone"></i> <span>11 96126-4316</span></p>
-                        </div>
-
-                        <a href="https://www.instagram.com/burninghouse.nc/" target="_blank" class="link-instagram">
-                            <i class="fa-brands fa-instagram"></i> <span>@burninghouse.nc</span>
-                        </a>
-
-                    </div>
-
-                    <a href="celula-burninghouse.html" class="botao-vejamais">Veja Mais</a>
-                </div>
+            <div class="filtros-container reveal">
+                <button class="filtro-btn active" data-filtro="Todos">Todos</button>
+                <button class="filtro-btn" data-filtro="Sexta-feira">Sexta-feira</button>
+                <button class="filtro-btn" data-filtro="Sábado">Sábado</button>
             </div>
-        </section>
+
+            <div class="celulas-container reveal">
+            </div>
         </section>
 
         <hr>
 
         <section id="eventos" class="reveal">
-            <h2>Próximos Eventos</h2>
-            <div class="evento">
-                <h3>Em breve...</h3>
-                <!-- <p><strong>Data:</strong> 30 de Agosto de 2025</p>
-                <p><strong>Horário:</strong> 22h</p>
-                <p>Uma noite de busca intensa e adoração. Não fique de fora!</p> -->
+            <h2 class="reveal">Próximos Eventos</h2>
+
+            <div class="calendario-container">
+                <div class="calendario-header">
+                    <button id="mes-anterior" class="nav-calendario">&lt;</button>
+                    <h3 id="mes-ano-titulo"></h3>
+                    <button id="mes-seguinte" class="nav-calendario">&gt;</button>
+                </div>
+                <div class="dias-da-semana">
+                    <div>Dom</div>
+                    <div>Seg</div>
+                    <div>Ter</div>
+                    <div>Qua</div>
+                    <div>Qui</div>
+                    <div>Sex</div>
+                    <div>Sáb</div>
+                </div>
+                <div class="dias-grid" id="dias-grid">
+                </div>
+
+                <div id="detalhes-evento-container">
+                </div>
             </div>
         </section>
 
@@ -146,6 +99,11 @@
     <footer>
         <p>&copy; 2025 Holy Club. Todos os direitos reservados.</p>
     </footer>
+
+    <div id="lightbox" class="lightbox-container">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
     <script src="javascript/script.js"></script>
 </body>
