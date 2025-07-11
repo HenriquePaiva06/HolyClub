@@ -4,36 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <title>Login</title>
+    <title>Login / Cadastro - Holy Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
-    <main>
-        <div class="login-container">
-            <h1>Login</h1>
-            <form action="/login" method="POST">
-                <div class="form-group">
-                    <label for="username">Usuário:</label>
-                    <input type="text" id="username" name="username" required>
+    <h1 class="titulo-login">Bem-vindo ao Holy Club</h1>
+    <div class="container mode-sign-in" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Crie sua Conta</h1>
+                <span>Use seu e-mail para o cadastro</span>
+                <div class="input-container">
+                    <label for="signup-nome"><i class="fa-solid fa-user"></i></label>
+                    <input type="text" id="signup-nome" placeholder="Nome Completo" required />
                 </div>
-                <div class="form-group">
-                    <label for="password">Senha:</label>
-                    <input type="password" id="password" name="password" required>
+                <div class="input-container">
+                    <label for="signup-email"><i class="fa-solid fa-envelope"></i></label>
+                    <input type="email" id="signup-email" placeholder="Email" required />
                 </div>
-                <button type="submit">Entrar</button>
+                <div class="input-container">
+                    <label for="signup-senha"><i class="fa-solid fa-lock"></i></label>
+                    <input type="password" id="signup-senha" placeholder="Senha" required />
+                </div>
+                <button type="submit">Cadastrar</button>
+                <p class="toggle-text">Já tem uma conta? <button type="button" class="toggle-btn"
+                        id="goToSignIn">Entre</button></p>
             </form>
-            <div class="register-link">
-                <p>Não tem uma conta? <a href="/register">Registrar</a></p>
-            </div>
-            <div class="forgot-password-link">
-                <p><a href="/forgot-password">Esqueci minha senha</a></p>
-            </div>
-            <div class="imagens-container">
-                <figure>
-                </figure>
-            </div>
-    </main>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Entrar</h1>
+                <div class="input-container">
+                    <label for="signin-email"><i class="fa-solid fa-envelope"></i></label>
+                    <input type="email" id="signin-email" placeholder="Email" required />
+                </div>
+                <div class="input-container">
+                    <label for="signin-senha"><i class="fa-solid fa-lock"></i></label>
+                    <input type="password" id="signin-senha" placeholder="Senha" required />
+                </div>
+                <a href="#">Esqueceu sua senha?</a>
+                <button type="submit">Entrar</button>
+                <p class="toggle-text">Não tem uma conta? <button type="button" class="toggle-btn"
+                        id="goToSignUp">Cadastre-se</button>
+                </p>
+            </form>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
