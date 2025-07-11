@@ -171,3 +171,25 @@ a {
 .toggle-btn:hover {
     text-decoration: underline;
 }
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .titulo-login {
+        font-size: 2em;
+    }
+
+    .subtitulo-login {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}
