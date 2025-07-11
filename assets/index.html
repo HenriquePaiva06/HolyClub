@@ -4,33 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Holy Club - Bem-vindo!</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
-
     <header>
         <img src="images/holy.png" alt="Logo da Holy Club">
         <h1>Holy Club</h1>
-
-        <nav class="menu-principal">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#celulas">Células</a></li>
-                <li><a href="#celulas">Eventos</a></li>
-            </ul>
-        </nav>
     </header>
 
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#celulas">Células</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section id="sobre">
+        <section id="sobre" class="reveal">
             <h2>Sobre a Holy Club</h2>
             <p>
                 Aqui vai a descrição sobre a Holy Club.
@@ -39,70 +41,70 @@
                 <strong>Nossos cultos acontecem aqui:</strong><br>
                 R. Galeno de Castro, 950, Av. das Nações Unidas, 21689 - Jurubatuba, São Paulo - SP, 04696-040
             </p>
-
-            <p class="redes-sociais">
-                <img src="images/favicon.png" Logo Instagram" class="icone-social">
-                <a href="https://www.instagram.com/holy.clubbvb/" target="_blank">@holy.clubbvb
-                </a>
+            <p class="redes-sociais insta-principal">
+                <img src="img/favicon.png" alt="Logo Instagram" class="icone-social">
+                <a href="https://www.instagram.com/holy.clubbvb/" target="_blank">@holy.clubbvb</a>
             </p>
-
             <div class="galeria-rede">
-                <img src="images/Rede.jpeg" alt="Momento da rede 1">
+                <img src="img/Rede.jpeg" alt="Momento da rede 1" class="imagem-galeria">
             </div>
         </section>
 
         <hr>
 
         <section id="celulas">
-            <h2>Nossas Células</h2>
-            <p>Encontre uma célula perto de você e venha fazer parte da nossa família!</p>
-            <div class="celulas-container">
+            <h2 class="reveal">Nossas Células</h2>
+            <p class="reveal">Encontre uma célula perto de você e venha fazer parte da nossa família!</p>
 
-                <div class="celula">
-                    <h3>Célula Priests</h3>
-                    <p><i class="fa-solid fa-user"></i> <span> Ana Clara</span></p>
+            <div class="filtros-container reveal">
+                <button class="filtro-btn active" data-filtro="Todos">Todos</button>
+                <button class="filtro-btn" data-filtro="Sexta-feira">Sexta-feira</button>
+                <button class="filtro-btn" data-filtro="Sábado">Sábado</button>
+            </div>
 
-                    <p><i class="fa-solid fa-phone"></i> <span> 11 95224-3776</span></p>
+            <div class="celulas-container reveal">
+            </div>
+        </section>
 
-                    <p>
-                        <img src="images/favicon.png" alt="Logo Instagram" class="icone-social">
-                        <a href="https://www.instagram.com/priests.rlvb/" target="_blank">@priests.rlvb
-                        </a>
-                    </p>
+        <hr>
+
+        <section id="eventos" class="reveal">
+            <h2 class="reveal">Próximos Eventos</h2>
+
+            <div class="calendario-container">
+                <div class="calendario-header">
+                    <button id="mes-anterior" class="nav-calendario">&lt;</button>
+                    <h3 id="mes-ano-titulo"></h3>
+                    <button id="mes-seguinte" class="nav-calendario">&gt;</button>
                 </div>
-
-                <div class="celula">
-                    <h3>Célula HopeLand</h3>
-                    <p><i class="fa-solid fa-user"></i> <span>Rodrigo</span></p>
-
-                    <p><i class="fa-solid fa-phone"></i> <span>11 99005-7554</span></p>
-
-                    <p>
-                        <img src="images/favicon.png" alt="Logo Instagram" class="icone-social">
-                        <a href="https://www.instagram.com/hopeland.vb/" target="_blank">@hopeland.vb
-                        </a>
-                    </p>
+                <div class="dias-da-semana">
+                    <div>Dom</div>
+                    <div>Seg</div>
+                    <div>Ter</div>
+                    <div>Qua</div>
+                    <div>Qui</div>
+                    <div>Sex</div>
+                    <div>Sáb</div>
                 </div>
-
-                <div class="celula">
-                    <h3>Célula Burning House</h3>
-                    <p><i class="fa-solid fa-user"></i> <span>Jhow</span></p>
-
-                    <p><i class="fa-solid fa-phone"></i> <span>11 96126-4316</span></p>
-
-                    <p>
-                        <img src="images/favicon.png" alt="Logo Instagram" class="icone-social">
-                        <a href="https://www.instagram.com/burninghouse.nc/" target="_blank">@burninghouse.nc</a>
-                    </p>
+                <div class="dias-grid" id="dias-grid">
+                </div>
+                <div id="detalhes-evento-container">
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
         <p>&copy; 2025 Holy Club. Todos os direitos reservados.</p>
     </footer>
 
+    <div id="lightbox" class="lightbox-container">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="javascript/script.js"></script>
 </body>
 
 </html>
