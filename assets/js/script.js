@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       telefone: '11 95224-3776',
       instagramUser: '@priests.rlvb',
       instagramLink: 'https://www.instagram.com/priests.rlvb/',
-      foto: 'img/priests.jpeg',
+      foto: 'images/priests.jpeg',
       paginaDetalhes: 'celula-priests.html',
       dia: 'Sábado'
     },
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       telefone: '11 99005-7554',
       instagramUser: '@hopeland.vb',
       instagramLink: 'https://www.instagram.com/hopeland.vb/',
-      foto: 'img/hopeland.jpeg',
+      foto: 'images/hopeland.jpeg',
       paginaDetalhes: 'celula-hopeland.html',
       dia: 'Sábado'
     },
@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       telefone: '11 96126-4316',
       instagramUser: '@burninghouse.nc',
       instagramLink: 'https://www.instagram.com/burninghouse.nc/',
-      foto: 'img/burninghouse.jpeg',
+      foto: 'images/burninghouse.jpeg',
       paginaDetalhes: 'celula-burninghouse.html',
       dia: 'Sábado'
     }
