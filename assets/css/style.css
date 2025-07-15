@@ -49,50 +49,49 @@ hr {
 }
 
 /* ==========================================================================
-   Cabeçalho e Navegação
+   Navegação Principal (VERSÃO FINAL E SIMPLIFICADA)
    ========================================================================== */
-header {
-    background-color: var(--cor-caixa);
-    text-align: center;
-    padding: 25px;
-    border-bottom: 1px solid var(--cor-borda);
-}
 
-header img {
-    width: 245px;
-    height: auto;
-}
-
-header h1 {
-    margin: 10px 0 0 0;
-    color: var(--cor-destaque);
-    font-size: 2.8em;
-}
-
+/* A barra de navegação agora é o nosso único cabeçalho */
 .menu-principal {
     background-color: var(--cor-caixa);
-    padding: 15px;
+    padding: 10px 40px;
+    /* Espaçamento interno */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    /* Usamos flexbox para alinhar a logo e os links */
+    display: flex;
+    justify-content: space-between;
+    /* Itens nas extremidades (logo na esquerda, links na direita) */
+    align-items: center;
+
+    /* A transição e o z-index são para o efeito 'sticky' */
     transition: all 0.3s ease-in-out;
+    position: relative;
+    /* Mudará para 'fixed' com o JS */
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+    /* Garante que o padding não afete a largura */
+    top: 0;
+    left: 0;
 }
 
+/* Estilo do logo dentro do menu */
+.logo-no-menu {
+    height: 50px;
+    /* Tamanho final do logo */
+    width: auto;
+}
+
+/* A lista de links */
 .menu-principal ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
     gap: 20px;
-}
-
-.menu-principal.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    padding: 12px;
+    /* Espaço entre os links */
 }
 
 .menu-principal a {
@@ -105,10 +104,17 @@ header h1 {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.menu-principal a:hover {
+/* Links do menu que não são a logo */
+.menu-principal ul a:hover {
     background-color: var(--cor-destaque);
     color: var(--cor-caixa);
     text-decoration: none;
+}
+
+/* O estilo do menu quando ele gruda no topo (não precisa de muitas mudanças agora) */
+.menu-principal.sticky {
+    position: fixed;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* ==========================================================================
