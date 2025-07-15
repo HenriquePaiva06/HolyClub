@@ -478,6 +478,81 @@ section h2 {
 }
 
 /* ==========================================================================
+   Estilos das Páginas de Detalhes de Célula
+   ========================================================================== */
+
+.pagina-detalhe {
+    background-color: var(--cor-caixa);
+    padding: 30px 40px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+}
+
+.detalhe-header {
+    text-align: center;
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.detalhe-header h1 {
+    font-size: 2.8em;
+    color: var(--cor-destaque);
+    margin: 0;
+}
+
+.detalhe-header p {
+    font-size: 1.2em;
+    color: var(--cor-texto);
+    opacity: 0.8;
+    margin: 10px 0 0 0;
+}
+
+.detalhe-foto-principal {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.detalhe-conteudo h2 {
+    font-size: 1.8em;
+    color: var(--cor-destaque);
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.detalhe-conteudo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detalhe-conteudo ul li {
+    font-size: 1.1em;
+    padding: 8px 0;
+}
+
+.mapa-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    /* Proporção 16:9 para o vídeo/mapa */
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+}
+
+.mapa-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
    Responsividade para Telas Pequenas
    ========================================================================== */
 @media (max-width: 768px) {
